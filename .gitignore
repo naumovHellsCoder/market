@@ -1,0 +1,6 @@
+# Project exclude paths
+/eureka-server/target/
+/gateway-service/target/
+/order-service/target/
+/out/
+/product-service/target/
