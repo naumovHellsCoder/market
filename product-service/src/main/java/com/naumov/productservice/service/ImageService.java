@@ -13,7 +13,7 @@ public class ImageService {
     public String getFilePathFromId(Integer id){
         Image image = imageRepository.getImageById(id);
         if(image == null) {
-            return "изображение отсутствует";
+            return "not found";
         }
         return image.getFilePath();
     }
