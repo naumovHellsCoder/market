@@ -9,14 +9,12 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ImageService {
     private final ImageRepository imageRepository;
+    
     public String getFilePathFromId(Integer id){
-        String filePath ="";
         Image image = imageRepository.getImageById(id);
         if(image == null) {
-            filePath = "изображение отсутствует";
-        }else {
-            filePath = image.getFilePath();
+            return "изображение отсутствует";
         }
-        return filePath;
+        return image.getFilePath();
     }
 }
