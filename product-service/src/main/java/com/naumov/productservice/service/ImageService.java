@@ -12,9 +12,6 @@ public class ImageService {
     
     public String getFilePathFromId(Integer id){
         Image image = imageRepository.getImageById(id);
-        if(image == null) {
-            return "not found";
-        }
-        return image.getFilePath();
+        return (image == null) ? "not found" : image.getFilePath();
     }
 }
